@@ -34,10 +34,17 @@ int main() {
     }
 
     printf("---SALARY REPORT---\n");
+<<<<<<< HEAD
     printf("Total Salary %.2f\n", total);
     printf("Average Salary %.2f\n", average);
     printf("Highest Salary %.2f\n", highest);
     printf("Lowest Salary %.2f\n", lowest);
+=======
+    printf("Total Salary %.2f", total);
+    printf("Average Salary %.2f", average);
+    printf("Highest Salary %.2f", highest);
+    printf("Lowest Salary %.2f", lowest);
+>>>>>>> e2ed2e65173585e1e7cd86135123ef69fa631c25
 
     //search for a particular salary
     printf("Enter search: \n");
