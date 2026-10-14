@@ -2,39 +2,40 @@
 
 int main(){
 
-    char supplierName[50];
-    double price;
-    double budget;
-    int registered;
-    int documentsComplete;
+    char supplierName[10][50];
+    double price [10];
+    double budget = 100000.00;
+    int qualified [10];
+    int registered [10];
+    int documentsComplete [10];
 
-    printf("Enter Supplier name: ");
-    scanf("%s", &supplierName);
+    for (int i=0; 1<10; i++)
+    {
+        printf("Enter Supplier name: ");
+        scanf("%s", &supplierName[i]);
 
-    printf("Enter Supplier price: ");
-    scanf("%lf", &price);
+        printf("Enter Supplier price: ");
+        scanf("%lf", &price[i]);
 
-    printf("Enter Bugdget: ");
-    scanf("%lf", &budget);
+        printf("Is Supplier registed? (1=Yes, 0=No): ");
+        scanf("%d", &registered[i]);
 
-    printf("Is Supplier registed? (1=Yes, 0=No): ");
-    scanf("%d", &registered);
-
-    printf("Are all the documents complete? (1=Yes, 0=No): ");
-    scanf("%d", &documentsComplete);
-
+        printf("Are all the documents complete? (1=Yes, 0=No): ");
+        scanf("%d", &documentsComplete[i]);
+    }
     printf("\n-----------------------------\n");
     printf("Snupplier: %s\n", supplierName);
     printf("Supplier Price: %.2f\n", price);
-    printf("Budget: %.2f\n", budget);
     
     if (registered == 1 && documentsComplete == 1 && price <= budget)
     {
-        printf("Status: Qualified\n");
+        printf("Qualified\n");
+        //determine the preferred supplier by lowest price
+        
     }
     else
     {
-        printf("Status: Disqualified\n");
+        printf("Disqualified\n");
     }
     return 0;
 }
